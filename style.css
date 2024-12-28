@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parent1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(101, 73, 226, 0.356);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+
+.PlayerOneInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.PlayerOneInfo h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 500;
+}
+
+
+#PlayerOneInput{
+    padding: 10px 10px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+
+.Startbtn {
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.errorHolder {
+    font-size: 20px;
+    color: red;
+    font-weight: 400;
+    display: inline-block;
+}
