@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("Player One Input:", PlayerOneInput);
     console.log("Start Button:", Startbtn);
 
-    if (!errorHolder || !PlayerOneInput || !Startbtn) {
+    if (!PlayerOneInput || !Startbtn) {
         console.error("One or more elements were not found. Check your HTML.");
         return;
-    }
+      }
+      
 
     let PlayerOneNumber;
 
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorHolder.innerHTML = "Input can be 0~10";
         }
 
-        if (parseInt (PlayerOneNumber) > 10) {
+        if (parseInt(PlayerOneNumber) > 10) {
            
             errorHolder.innerHTML ="input Range 0 to 10";
             errorHolder.style.color ="white";
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             errorHolder.style.display ="block";
             errorHolder.style.padding ="10px";
         }
-      else if (parseInt (PlayerOneNumber) < 0) {
+      else if (parseInt(PlayerOneNumber) < 0) {
        
         errorHolder.innerHTML ="input Range 0 to 10";
             errorHolder.style.color ="white";
@@ -44,19 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //PlayerOneInput function 
     PlayerOneInput.addEventListener('keyup', (e) => {
-        
-        if (e.key === "Backspace") {
-            errorHolder.innerHTML = "";
-            errorHolder.style.display = "none";
-            errorHolder.style.display = "none";
+        if (isNaN(PlayerOneInput.value) || parseInt(PlayerOneInput.value) < 0 || parseInt(PlayerOneInput.value) > 10) {
+          showError("Input range 0 to 10");
+        } else {
+          errorHolder.style.display = "none";
+          PlayerOneNumber = parseInt(PlayerOneInput.value);
+          console.log(PlayerOneNumber);
         }
-        PlayerOneNumber += e.key;
-
-        
-            console.log(PlayerOneNumber);
-           
-        
-    
-
-});
+      });
+      
 });
