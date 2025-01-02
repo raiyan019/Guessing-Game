@@ -12,7 +12,8 @@ body{
     height: 100vh;
 }
 
-.parent1 {
+.parent1 , 
+.parent2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,20 +24,23 @@ body{
 }
 
 
-.PlayerOneInfo {
+.PlayerOneInfo,
+.PlayerTwoInfo {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.PlayerOneInfo h1{
+.PlayerOneInfo h1,
+.PlayerTwoInfo h1{
     font-size: 60px;
     color: white;
     font-weight: 500;
 }
 
 
-#PlayerOneInput{
+#PlayerOneInput,
+#PlayerTwoInput {
     padding: 10px 10px;
     background-color: white;
     border-radius: 10px;
@@ -44,15 +48,21 @@ body{
 }
 
 
-.Startbtn {
+.Startbtn,
+.Guess {
     padding: 10px 10px;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.errorHolder {
+.errorHolder,
+.errorHolder2 {
     font-size: 20px;
     color: red;
     font-weight: 400;
     display: inline-block;
+}
+
+.parent2 { 
+    display: none;
 }
